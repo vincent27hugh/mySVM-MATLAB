@@ -12,28 +12,17 @@ for i=1:N
         plot(X(i,1),X(i,2),'bx');
     end
 end
-%linear
-xvar=linspace(min(X(:,1)),max(X(:,1)),100);
-switch kernel
-    case 'linear'
-        beta=X'*(alpha.*Y);
-        yvar=(-beta0-xvar*beta(1))/beta(2);
-        plot(xvar,yvar,'-');
-        xlabel('X1');ylabel('X2');title(strcat('c=',num2str(Cost)));
-    case 'polynomial'
-        fun=@(X)Ker_Polynomial([xvar,X],[xvar,X])*(alpha.*Y)+beta0;
-        X0 = zeros(size(xvar));
-        yvar = fsolve(fun,X0);
-        plot(xvar,yvar,'-');
-        xlabel('X1');ylabel('X2');title(strcat('c=',num2str(Cost)));
-    case 'RBF'
-        
-        fun=@(X)(Ker_RBF([xvar,X],[xvar,X]))*(alpha.*Y)+beta0;
-        X0 = zeros(size(xvar));
-        yvar = fsolve(fun,X0);
-        plot(xvar,yvar,'-');
-        xlabel('X1');ylabel('X2');title(strcat('c=',num2str(Cost)));
-end
+%
+d = 0.02;
+[x1Grid,x2Grid] = meshgrid(min(X(:,1)):d:max(X(:,1)),...
+    min(X(:,2)):d:max(X(:,2)));
+xGrid = [x1Grid(:),x2Grid(:)];
+scores = SVM_pred(xGrid, X, Y,kernel,alpha,beta0);
+
+contour(x1Grid,x2Grid,reshape(scores,size(x1Grid)),[0 0],'k');
+
+xlabel('X1');ylabel('X2');title(strcat('c=',num2str(Cost)));
+    
 
 hold off
 return
