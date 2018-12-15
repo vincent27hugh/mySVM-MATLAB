@@ -44,8 +44,6 @@ for i=1:size(serial_sv,1)
 end
 beta0=temp_beta0/size(serial_sv,1);
 
-
-
 return
 
 
