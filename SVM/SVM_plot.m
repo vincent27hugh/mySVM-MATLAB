@@ -5,13 +5,11 @@ global Cost
 figure
 hold on
 N = size(X,1);
-for i=1:N
-    if Y(i)==1
-        plot(X(i,1),X(i,2),'ro');
-    elseif Y(i)==-1
-        plot(X(i,1),X(i,2),'bx');
-    end
-end
+
+plot(X(Y==1,1),X(Y==1,2),'ro');
+
+plot(X(Y==-1,1),X(Y==-1,2),'bx');
+
 %
 d = 0.02;
 [x1Grid,x2Grid] = meshgrid(min(X(:,1)):d:max(X(:,1)),...
@@ -21,8 +19,13 @@ scores = SVM_pred(xGrid, X, Y,kernel,alpha,beta0);
 
 contour(x1Grid,x2Grid,reshape(scores,size(x1Grid)),[0 0],'k');
 
-xlabel('X1');ylabel('X2');title(strcat('c=',num2str(Cost)));
-    
-
+xlabel('X1','FontSize', 18);ylabel('X2', 'FontSize', 18);
+title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost))}, 'FontSize', 18);
+legend({'+1';'-1'},'FontSize',16,'Location', 'Best');
 hold off
+% Maximize figure
+set(gcf, 'units','normalized','outerposition',[0 0 1 1]);
+str_fig = strcat('SVM_',kernel,'_C=',num2str(Cost));
+saveas(gcf, str_fig,'png');
+saveas(gcf, str_fig);
 return
