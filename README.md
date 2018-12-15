@@ -21,11 +21,13 @@ The dual problem of SVM is a quadratic optimization problem with linear constrai
 
 The following are the demo of SVM:
 
-![](SVM/SVM_Linear2.png)
+![](SVM/SVM_linear_C=1000.png)
 
-![](SVM/SVM_Linear.png)
+![](SVM/SVM_ploynomial_C=1000.png)
 
-![](SVM/SVM_Linear3.png)
+![](SVM/SVM_RBF_C=1000.png)
+
+![](SVM/SVM_Sigmoid_C=1000.png)
 
 ## Transductive SVM (TSVM)
 

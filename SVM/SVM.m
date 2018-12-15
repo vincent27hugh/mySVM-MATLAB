@@ -12,8 +12,8 @@ switch kernel
         Ker=Ker_Polynomial(X,X);
     case 'RBF'
         Ker=Ker_RBF(X,X);
-    case 'NeutralNet'
-        Ker=Ker_NeuralNet(X,X);
+    case 'Sigmoid'
+        Ker=Ker_Sigmoid(X,X);
 end
 
 N= size(X,1);

@@ -1,7 +1,7 @@
 function SVM_plot(X,Y,alpha,beta0,kernel)
 % X is with 2 coloums
 
-global Cost
+global Cost poly_con gamma kappa1
 figure
 hold on
 N = size(X,1);
@@ -20,7 +20,16 @@ scores = SVM_pred(xGrid, X, Y,kernel,alpha,beta0);
 contour(x1Grid,x2Grid,reshape(scores,size(x1Grid)),[0 0],'k');
 
 xlabel('X1','FontSize', 18);ylabel('X2', 'FontSize', 18);
-title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost))}, 'FontSize', 18);
+switch kernel
+    case 'linear'
+        title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost))}, 'FontSize', 18);
+    case 'ploynomial'
+        title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost),';n=',num2str(poly_con))}, 'FontSize', 18);
+    case 'RBF'
+        title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost),';gamma=',num2str(gamma))}, 'FontSize', 18);
+    case 'Sigmoid'
+        title({'SVM',strcat('Kernel:',kernel,';C=',num2str(Cost),';kappa=',num2str(kappa1))}, 'FontSize', 18);
+end
 legend({'+1';'-1'},'FontSize',16,'Location', 'Best');
 hold off
 % Maximize figure

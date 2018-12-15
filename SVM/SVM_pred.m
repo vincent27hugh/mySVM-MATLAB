@@ -13,8 +13,8 @@ switch kernel
         Ker=Ker_Polynomial(X,X_new);
     case 'RBF'
         Ker=Ker_RBF(X,X_new);
-    case 'NeutralNet'
-        Ker=Ker_NeuralNet(X,X_new);
+    case 'Sigmoid'
+        Ker=Ker_Sigmoid(X,X_new);
 end
 
 Y_new = sum(diag(alpha.*Y)*Ker,1)'+beta0*ones(M,1);
