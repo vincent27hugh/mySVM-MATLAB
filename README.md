@@ -17,6 +17,8 @@ for 150 iris specimens. There are 50 specimens from each of three species.
 
 Support Vector Machine (SVM) [Cortes & Vapnuk, 1995] is a supervised learning model.
 
+The dual problem of SVM is a quadratic optimization problem with linear constraints. So we solved it using [`quadprog` function](https://ww2.mathworks.cn/help/optim/ug/quadprog.html) of MATLAB [Quadratic Programming Toolbox](https://ww2.mathworks.cn/help/optim/quadratic-programming.html).
+
 The following are the demo of SVM:
 
 ![](SVM/SVM_Linear2.png)

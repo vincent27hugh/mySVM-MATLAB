@@ -24,7 +24,7 @@ beq=0;
 A=[];
 b=[];
 lb = zeros(N,1);
-ub = repmat(Cost,N,1);
+ub = repmat(Cost;
 alpha=quadprog(H,f,A,b,Aeq,beq, lb, ub);
 
 

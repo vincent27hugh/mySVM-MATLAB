@@ -1,4 +1,4 @@
-function U=OutProduction(V1,V2)
+function U=outproduction(V1,V2)
 %V1,V2 are coloum vector
 for i=1:max(size(V1))
     for j = 1:max(size(V2))

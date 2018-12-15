@@ -4,7 +4,8 @@ function SVM_plot(X,Y,alpha,beta0,kernel)
 global Cost
 figure
 hold on
-for i=1:size(Y,1)
+N = size(X,1);
+for i=1:N
     if Y(i)==1
         plot(X(i,1),X(i,2),'ro');
     elseif Y(i)==-1
