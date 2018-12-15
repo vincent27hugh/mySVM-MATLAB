@@ -33,3 +33,4 @@ vignettes/*.pdf
 *.knit.md
 
 # Folders that I want to ignore
+SSVM-SPSI/
