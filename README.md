@@ -91,11 +91,11 @@ The following are the demo of TSVM:
 - [x] Hard margin SVM with linear kernel
 - [x] Hard margin TSVM with linear kernel
 - [X] Add nonlinear kernels to SVM
-- [] Add nonlinear kernels to TSVM
-- [] Soft margin for SVM
-- [] Soft margin for TSVM
-- [] Add multiple level classification function
-- [] Visualization of hyper-plane in 3D plot
+- [ ] Add nonlinear kernels to TSVM
+- [ ] Soft margin for SVM
+- [ ] Soft margin for TSVM
+- [ ] Add multiple level classification function
+- [ ] Visualization of hyper-plane in 3D plot
 
 ---
 
