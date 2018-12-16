@@ -6,7 +6,7 @@ Here are files of my own implementation of [Support Vector Machine](https://en.w
 
 Kernels used in this project:
 
-* Linear kernel;
+* Linear kernel:<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> \\(gamma\\);
 * Polynomial kernel;
 * RBF;
 * Sigmoid kernel;
