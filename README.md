@@ -15,7 +15,23 @@ Kernels used in this project[^1]:
 
 The dual problems of SVM is a quadratic optimization problem with linear constraints. So we solved it using [`quadprog` function](https://ww2.mathworks.cn/help/optim/ug/quadprog.html) of MATLAB [Quadratic Programming Toolbox](https://ww2.mathworks.cn/help/optim/quadratic-programming.html).
 
-## Dataset in Demo
+## How to use it
+
+* Step 1: Load the data. You'd better reshape the data as follow: 
+	* `X` is the matrix of input data with dimension of `N`-by-`p` where `N` is the number of instances and `p` is the number of features. For the convenience of visualization, we define `p=2` here;
+	* `Y` is the column vector of output data with dimension of `N`-by-`1`;
+* Step 2: Define parameters ion `define_parameters.m` file. 
+	* `poly_con` is the parameter for Polynomial Kernel, 
+	* `gamma` is the parameter for Gaussian Kernel, 
+	* `kappa1` & `kappa2` are the parameters for Sigmoid Kernel, 
+	* `precision` is the tolerance of precision,
+	* `Cost` is the hyperparameter for SVM.
+* Step 3: Fit the model using `SVM.m` file. Choose the kernel you want and fit the model with your data.
+* Step 4: Visualize the 2D plot. If the number of features of your data is 2, you can visualize your result using `SVM_plot.m` file.
+
+## Demo
+
+### Dataset
 
 MATLAB [sample data set](https://ww2.mathworks.cn/help/stats/sample-data-sets.html) Fisher's 1936 iris data (`fisheriris`) consists of measurements on the sepal length, sepal width, petal length, and petal width for 150 iris specimens. There are 50 specimens from each of three species:
 
@@ -23,7 +39,7 @@ MATLAB [sample data set](https://ww2.mathworks.cn/help/stats/sample-data-sets.ht
 * Versicolor,
 * Virginica.
 
-## SVM
+### SVM
 
 Support Vector Machine (SVM) [Cortes & Vapnuk, 1995] is a supervised learning model.
 
@@ -37,7 +53,7 @@ The following are the demo of SVM:
 
 ![](SVM/SVM_Sigmoid_C=1000.png)
 
-## Transductive SVM (TSVM)
+### Transductive SVM (TSVM)
 
 Transductive SVM (TSVM) [Joachims, 1995] is a semi-supervised learning model.
 
@@ -46,6 +62,7 @@ The following are the demo of TSVM:
 ![](TSVM/TSVM.png)
 
 ![](TSVM/TSVM2.png)
+
 
 ## Readings
 

@@ -4,7 +4,11 @@ function SVM_plot(X,Y,alpha,beta0,kernel)
 global Cost poly_con gamma kappa1
 figure
 hold on
-N = size(X,1);
+P = size(X,2);
+
+if P ~=2
+   warning('# of input X should be 2 for the 2D visualization!!')
+end
 
 plot(X(Y==1,1),X(Y==1,2),'ro',...
     'LineWidth', 4,...
