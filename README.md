@@ -1,8 +1,17 @@
-# My own implementation of SVM in MATLAB
+# My own implementation of SVM and TSVM in MATLAB
 
 Here are files of my own implementation of [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) in MATLAB.
 
-## Dataset
+## Kernel Method
+
+Kernels used in this project:
+
+* Linear kernel;
+* Polynomial kernel;
+* RBF;
+* Sigmoid kernel;
+
+## Dataset in Demo
 
 MATLAB [sample data set](https://ww2.mathworks.cn/help/stats/sample-data-sets.html) Fisher's 1936 iris data (`fisheriris`) consists of measurements on the 
 
