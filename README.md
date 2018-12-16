@@ -1,7 +1,5 @@
 # My own implementation of SVM and TSVM in MATLAB
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 Here are files of my own implementation of [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) & Transductive SVM (TSVM) in MATLAB.
 
 ## Kernel Method
