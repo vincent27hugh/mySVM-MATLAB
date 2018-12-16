@@ -2,16 +2,20 @@
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-Here are files of my own implementation of [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) in MATLAB.
+Here are files of my own implementation of [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) & Transductive SVM (TSVM) in MATLAB.
 
 ## Kernel Method
 
-Kernels used in this project:
+Kernels used in this project[^1]:
 
-* Linear kernel: \\(\gamma\\);
-* Polynomial kernel;
-* RBF;
-* Sigmoid kernel;
+* Linear kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=x^Ty+c" title="\Large k(x,y)=x^Ty+c" />;
+* Polynomial kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=(\alpha x^T y+c)^n" title="\Large k(x,y)=(\alpha x^T y+c)^n"/>;
+* Gaussian Kernel (RBF): <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=exp(-\gamma \left\lVert x-y \right\rVert ^2)" title="\Large k(x,y)=exp(-\gamma \left\lVert x-y \right\rVert ^2)"/>;
+* Sigmoid kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)= tanh(\kappa x^T y + \kappa')" title="\Large k(x,y)= tanh(\kappa x^T y + \kappa')"/>;
+
+## Optimization
+
+The dual problems of SVM is a quadratic optimization problem with linear constraints. So we solved it using [`quadprog` function](https://ww2.mathworks.cn/help/optim/ug/quadprog.html) of MATLAB [Quadratic Programming Toolbox](https://ww2.mathworks.cn/help/optim/quadratic-programming.html).
 
 ## Dataset in Demo
 
@@ -27,8 +31,6 @@ for 150 iris specimens. There are 50 specimens from each of three species.
 ## SVM
 
 Support Vector Machine (SVM) [Cortes & Vapnuk, 1995] is a supervised learning model.
-
-The dual problem of SVM is a quadratic optimization problem with linear constraints. So we solved it using [`quadprog` function](https://ww2.mathworks.cn/help/optim/ug/quadprog.html) of MATLAB [Quadratic Programming Toolbox](https://ww2.mathworks.cn/help/optim/quadratic-programming.html).
 
 The following are the demo of SVM:
 
@@ -65,9 +67,12 @@ The following are the demo of TSVM:
 * [semisup-learn/methods/scikitTSVM.py](https://github.com/tmadl/semisup-learn/blob/master/methods/scikitTSVM.py): Semi-supervised learning frameworks for python, which allow fitting scikit-learn classifiers to partially labeled data
 * [CalculatedContent/tsvm](https://github.com/CalculatedContent/tsvm): experiments testing transductive svm for my blog posts
 
- 
 
 ## Reference
 
 * Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine learning, 20(3), 273-297.
 * Joachims, T. (1999, June). Transductive inference for text classification using support vector machines. In ICML (Vol. 99, pp. 200-209).
+
+---
+
+[^1]: [Kernel Functions for Machine Learning Applications](http://crsouza.com/2010/03/17/kernel-functions-for-machine-learning-applications/#linear)
