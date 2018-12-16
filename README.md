@@ -29,9 +29,10 @@ The dual problems of SVM is a quadratic optimization problem with linear constra
 * Step 3: Fit the model using `SVM.m` file. Choose the kernel you want and fit the model with your data.
 * Step 4: Visualize the 2D plot. If the number of features of your data is 2, you can visualize your result using `SVM_plot.m` file.
 
-## Demo
+## Demo of binary classification of hard margin models
 
-### Dataset
+
+### Data-set
 
 MATLAB [sample data set](https://ww2.mathworks.cn/help/stats/sample-data-sets.html) Fisher's 1936 iris data (`fisheriris`) consists of measurements on the sepal length, sepal width, petal length, and petal width for 150 iris specimens. There are 50 specimens from each of three species:
 
@@ -84,6 +85,17 @@ The following are the demo of TSVM:
 
 * Cortes, C., & Vapnik, V. (1995). Support-vector networks. Machine learning, 20(3), 273-297.
 * Joachims, T. (1999, June). Transductive inference for text classification using support vector machines. In ICML (Vol. 99, pp. 200-209).
+
+## Task lists
+
+- [x] Hard margin SVM with linear kernel
+- [x] Hard margin TSVM with linear kernel
+- [X] Add nonlinear kernels to SVM
+- [] Add nonlinear kernels to TSVM
+- [] Soft margin for SVM
+- [] Soft margin for TSVM
+- [] Add multiple level classification function
+- [] Visualization of hyper-plane in 3D plot
 
 ---
 
