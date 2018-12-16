@@ -1,12 +1,14 @@
 # My own implementation of SVM and TSVM in MATLAB
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 Here are files of my own implementation of [Support Vector Machine](https://en.wikipedia.org/wiki/Support_vector_machine) (SVM) in MATLAB.
 
 ## Kernel Method
 
 Kernels used in this project:
 
-* Linear kernel:<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script> \\(gamma\\);
+* Linear kernel: \\(\gamma\\);
 * Polynomial kernel;
 * RBF;
 * Sigmoid kernel;
