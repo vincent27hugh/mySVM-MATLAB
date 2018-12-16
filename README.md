@@ -9,7 +9,7 @@ Here are files of my own implementation of [Support Vector Machine](https://en.w
 Kernels used in this project[^1]:
 
 * Linear kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=x^Ty+c" title="\Large k(x,y)=x^Ty+c" />;
-* Polynomial kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=(\alpha x^T y+c)^n" title="\Large k(x,y)=(\alpha x^T y+c)^n" />;
+* Polynomial kernel: <img src="https://latex.codecogs.com/gif.latex?k%28x%2Cy%29%3D%28%5Calpha%20x%5ETy&plus;c%29%5En" />;
 * Gaussian Kernel (RBF): <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)=exp(-\gamma \left\lVert x-y \right\rVert ^2)" title="\Large k(x,y)=exp(-\gamma \left\lVert x-y \right\rVert ^2)" />;
 * Sigmoid kernel: <img src="https://latex.codecogs.com/svg.latex?\Large&space;k(x,y)= tanh(\kappa x^T y + \kappa')" title="\Large k(x,y)= tanh(\kappa x^T y + \kappa')" />;
 
